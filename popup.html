@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web annotator</title>
+</head>
+<body>
+        <div id="colorPickerContainer" style="display: none;">
+        <label for="colorPicker">Choose highlight color:</label>
+        <select id="colorPicker">
+            <option value="none">None</option>
+            <option value="yellow">Yellow</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        </div>
+
+        <div>
+        <p><button id="btn">Highlight (Ctrl+Shift+H) </button> </p>
+        <p><button id="btn2">Remove highlight (Ctrl+Shift+Q) </button> </p>
+        <p> <button id="btn3">Export</button> </p>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+        <script src="popup.js"></script>
+
+</body>
+</html>

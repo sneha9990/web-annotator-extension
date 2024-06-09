@@ -1,0 +1,49 @@
+{
+    "manifest_version": 3,
+    "name": "Web annotator",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "scripting",
+      "tabs",
+      "storage",
+      "file://*/*"
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "128": "logo.png"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content.js"],
+            "run_at": "document_end"
+        }
+      ],
+    "commands": {
+    "highlight-text": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+H"
+      },
+      "description": "Highlight selected text"
+    },
+    "dehighlight-text": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Q"
+      },
+      "description": "Dehighlight text"
+    },
+    "search-ann": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S"
+      },
+      "description": "Search annotation"
+    }
+  }
+  }
+  
